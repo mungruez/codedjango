@@ -1,0 +1,19 @@
+.card {
+  height: 100%; /* Your height here */
+  overflow: hidden;
+  background-color: goldenrod
+}
+
+.card-content {
+  height: 100%; /* Your height here */
+  overflow: hidden;
+  color: lightgreen;
+  background-color: silver;
+  text-overflow: ellipsis;
+  margin-bottom: 12px;
+}
+
+.card-image {
+  height: 250px; /* Your height here */
+  overflow: hidden;
+}

@@ -1,0 +1,26 @@
+{% extends 'my_app/jobs.html' %}
+
+{% block content %}
+
+    <h3 style="text-align: center">{{ search | title }}</h3>
+    <div class="row">
+        {% for k in job_postings %}
+        <div class="col s4">
+            <div class="card">
+               <div class="card-content">
+                   <p>{{ k.title }}</p>
+                </div>
+                <div class="card-content">
+                   <p>{{ k.pubDate }}</p>
+                </div>
+                <div class="card-link">
+                    <a href="{{ k.link }}">View Job by-{{ k.source }}</a>
+                </div>
+                <div class="card-content">
+                    <p>{{ k.description }}</p>
+                 </div>
+            </div>
+        </div>                
+        {% endfor %}    
+    </div>
+{% endblock content %}
