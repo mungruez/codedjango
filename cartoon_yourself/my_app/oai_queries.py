@@ -1,7 +1,6 @@
 from django.conf import settings
 import os
 import openai
-
 # OpenAI API Key
 openai.api_key = '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'
 
@@ -11,7 +10,4 @@ def get_completion(prompt):
         messages=[{"role": "user", "content": prompt }]
     )
     response = query.get('choices')[0]['message']['content']
-    reply = query.choices[0].message.content
-    print(f"ChatGPT: {reply}")
-    print("Chat Called")
     return response
